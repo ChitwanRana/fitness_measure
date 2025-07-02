@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: fitness-app
+    env: python
+    buildCommand: pip install -r fitness_app/requirements.txt
+    startCommand: streamlit run fitness_app/app.py --server.port $PORT --server.enableCORS false
+    region: oregon
+    branch: main
+    plan: free
